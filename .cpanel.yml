@@ -1,0 +1,19 @@
+---
+deployment:
+  tasks:
+    # Deployment path – teach-era.com ana domain
+    - export DEPLOYPATH=/home/u1682534/public_html/
+
+    # Node.js ortamini aktif et
+    - /bin/bash -c 'source /home/u1682534/nodevenv/teachera/20/bin/activate 2>/dev/null || true'
+
+    # Bagimliliklari yukle ve build al
+    - npm install --production=false 2>/dev/null || pnpm install 2>/dev/null || true
+    - npm run build 2>/dev/null || pnpm run build 2>/dev/null || true
+
+    # Build ciktisini public_html'e kopyala
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/cp -R dist/* $DEPLOYPATH
+
+    # SPA routing icin .htaccess kopyala
+    - /bin/cp dist/.htaccess $DEPLOYPATH/.htaccess 2>/dev/null || true

@@ -1,0 +1,48 @@
+/* Import Neutraface 2 Text Font Family */
+@import url('https://fonts.cdnfonts.com/css/neutraface-2-text');
+
+/* Import Retro Signature Font */
+@import url('https://fonts.cdnfonts.com/css/retro-signature');
+
+/* Import Luxury Diamond/Gold/Platinium Fonts */
+@import url('https://fonts.cdnfonts.com/css/luxury-diamond');
+@import url('https://fonts.cdnfonts.com/css/luxury-gold');
+@import url('https://fonts.cdnfonts.com/css/luxury-platinium');
+
+/* Fallback System Fonts */
+body {
+  font-family: 'Neutraface 2 Text', 'Neutraface 2 Text:Book', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animation Keyframes */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(231, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(231, 0, 0, 0.6);
+  }
+}
